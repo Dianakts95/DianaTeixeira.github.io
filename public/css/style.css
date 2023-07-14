@@ -122,9 +122,8 @@ img{
 
 /* ------------------------ Sections----------------------------------- */
 .container{
-    /* max-width: 768px; */
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;    
+ max-width: 768px; 
+  margin: 0 1rem;    
 }
 
 .section{
@@ -258,6 +257,10 @@ img{
     align-items: center;
 } 
 
+.about_buttons{
+    display: flex;
+    justify-content: center;
+}
 
 /* -----------------------  Portfolio --------------------- */
 .portfolio{
@@ -269,7 +272,9 @@ img{
 .carousel{
  width: auto;
 }
-
+.carousel-item img{
+    border: .5rem solid black;
+}
 .carousel-caption{
     background-color: rgba(0, 0, 0, 0.475);
     border-radius: 1.5rem;
@@ -277,16 +282,16 @@ img{
 
 /* -----------------------  Skills --------------------- */
 .skills{
-     display: flex;
+    display: flex;
     flex-direction: column;
     align-items: center; 
 }
 
 .accordion{
---bs-border-color: none !important;
---bs-accordion-btn-focus-box-shadow: none !important;
+--bs-border-color: none ;
+--bs-accordion-btn-focus-box-shadow: none ;
 --bs-accordion-color: white;
---bs-accordion-bg: (var(--first-color)) !important; 
+--bs-accordion-bg: (var(--first-color)) ; 
 }
 
 .accordion-button{
@@ -321,7 +326,6 @@ img{
     font-size: 2rem;
     color: var(--first-color);
     margin-right: .75rem;
-    
 }
 
 .contact_title{
@@ -359,34 +363,19 @@ img{
 /* ------------Footer--------------- */
 
 .footer{
-    padding-top: 2rem;
-}
-
-.footer_container{
-    row-gap: 3.5rem;
-}
-
-.footer_bg{
     background-color: var(--first-color);
-    padding: 2rem 0 3rem;
+    padding: 1.5rem 0 1rem ; 
 }
 
-.footer_title{
-    font-size: var(--h1-font-size);
-    margin-bottom: 0.25rem;
-}
-
-.footer_subtitle{
-    font-size: var(--small-font-size);
-}
-
-.footer_links{
+.footer_socials{
+    font-size: 1rem;
     display: flex;
-    flex-direction: column;
-    row-gap: 1.5rem;
+    align-items: center;   
+    justify-content: center;
+    
 }
 
-.footer_link:hover{
+.footer_social:hover {
     color: var(--first-color-alt);
 }
 
@@ -395,19 +384,13 @@ img{
     margin-right: 1.5rem;
 }
 
-.footer_social:hover{
-    color: var(--first-color-alt);
-}
-
 .footer_copy{
+    padding-top: 1rem;
     font-size: var(--smaller-font-size);
     text-align: center;
     color: white;
-    margin: 3rem;
 }
 
-.footer_title,
-.footer_subtitle,
 .footer_link,
 .footer_social{
     color: white;
@@ -415,11 +398,8 @@ img{
 
 /* for small devices */
 @media screen and (max-width:350px) {
-
-    
     .container{
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin: 0 1rem;
     }
 
     .home_content{
@@ -501,7 +481,10 @@ img{
         font-size: 1.5rem;
     }
 
-    .about_container{
+    .about_container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
         column-gap: 5rem;
     }
 
@@ -513,10 +496,6 @@ img{
 
     .about_data{
         text-align: initial;
-    }
-
-    .about_buttons{
-        justify-content: initial;
     }
 
     .accordion{
@@ -532,26 +511,11 @@ img{
     .contact_form{
         width: 660px;
     }
-    .footer_container{
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .footer_bg{
-        padding: 3rem 0 3.5rem;
-    } 
-
-    .footer_links{
-        flex-direction: row;
-        column-gap: 2rem;
-    }
-
     .footer_socials{
-        justify-self: flex-end;
+        display: flex;
     }
 
-    .footer_copy{
-        margin-top: 4.5rem;
-    }
+  
     
 
 }
